@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="topbar">
+  <a class="brand" href="#start" aria-label="К первому экрану">
+    <span class="brand-mark">M</span>
+    <span>MentorTrack</span>
+  </a>
+
+  <div class="topbar-meta">
+    <span class="topbar-label">Pitch deck</span>
+    <span><strong data-current>01</strong> / <span data-total>07</span></span>
+  </div>
+</header>
+
+<main class="deck" data-deck>
+  <section class="slide slide-hero" id="start" data-title="Продукт">
+    <div class="slide-number">01</div>
+    <div class="hero-copy">
+      <p class="eyebrow">Рабочее пространство для менторинга</p>
+      <h1>Меньше контроля.<br /><em>Больше прогресса.</em></h1>
+      <p class="lead">
+        MentorTrack собирает план, домашки и обратную связь
+        в один понятный процесс.
+      </p>
+    </div>
+
+    <div class="hero-proof">
+      <p>Для кого</p>
+      <strong>Частные менторы и небольшие школы</strong>
+      <span>которые ведут учеников регулярно</span>
+    </div>
+
+    <a class="continue-link" href="#problem">
+      Начать питч <span aria-hidden="true">↓</span>
+    </a>
+  </section>
+
+  <section class="slide" id="problem" data-title="Проблема">
+    <div class="slide-number">02</div>
+    <div class="section-heading">
+      <p class="eyebrow">Проблема</p>
+      <h2>Обучение распадается<br />между инструментами</h2>
+    </div>
+
+    <div class="problem-layout">
+      <div class="tool-chain" aria-label="Разрозненные инструменты">
+        <span>Telegram</span>
+        <i>+</i>
+        <span>Notion</span>
+        <i>+</i>
+        <span>Sheets</span>
+        <i>+</i>
+        <span>Память</span>
+      </div>
+      <div class="impact">
+        <p class="impact-label">В результате</p>
+        <ul>
+          <li><strong>Ментор</strong> вручную контролирует сроки</li>
+          <li><strong>Ученик</strong> теряет следующий шаг</li>
+          <li><strong>Прогресс</strong> замечают слишком поздно</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="solution" data-title="Решение">
+    <div class="slide-number">03</div>
+    <div class="section-heading">
+      <p class="eyebrow">Решение</p>
+      <h2>Один цикл.<br />Один источник правды.</h2>
+    </div>
+
+    <div class="flow">
+      <article>
+        <span>01</span>
+        <h3>План</h3>
+        <p>Цель, задачи и дедлайны</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Работа</h3>
+        <p>Домашка в контексте задачи</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Фидбек</h3>
+        <p>Быстрый ответ ментора</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>Контроль</h3>
+        <p>Статус и следующий шаг</p>
+      </article>
+    </div>
+
+    <p class="slide-note">Система не заменяет ментора. Она убирает операционную рутину.</p>
+  </section>
+
+  <section class="slide" id="product" data-title="Продукт">
+    <div class="slide-number">04</div>
+    <div class="section-heading compact">
+      <p class="eyebrow">Пользовательский опыт</p>
+      <h2>За 10 секунд понятно,<br />кому нужно внимание</h2>
+    </div>
+
+    <div class="product-demo">
+      <div class="demo-sidebar">
+        <span class="demo-logo">M</span>
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="demo-main">
+        <div class="demo-header">
+          <div>
+            <small>Сегодня · 3 требуют внимания</small>
+            <h3>Ученики</h3>
+          </div>
+          <div class="demo-avatar">AT</div>
+        </div>
+        <div class="student-list">
+          <div class="student">
+            <span class="status good"></span>
+            <strong>Анна</strong>
+            <span>Выполняет план</span>
+            <b>7 / 8</b>
+          </div>
+          <div class="student attention">
+            <span class="status warn"></span>
+            <strong>Максим</strong>
+            <span>Нет ответа 4 дня</span>
+            <b>3 / 8</b>
+          </div>
+          <div class="student">
+            <span class="status good"></span>
+            <strong>Илья</strong>
+            <span>Ждёт проверки</span>
+            <b>5 / 8</b>
+          </div>
+        </div>
+      </div>
+      <aside class="demo-alert">
+        <span>Нужен контакт</span>
+        <strong>Максим отстаёт от плана</strong>
+        <p>Система заметила риск до следующего созвона.</p>
+        <button type="button">Открыть профиль →</button>
+      </aside>
+    </div>
+  </section>
+
+  <section class="slide" id="competition" data-title="Рынок">
+    <div class="slide-number">05</div>
+    <div class="section-heading compact">
+      <p class="eyebrow">Конкуренты и альтернативы</p>
+      <h2>Не ещё одна LMS.<br />Инструмент ежедневной работы.</h2>
+    </div>
+
+    <div class="comparison">
+      <div class="comparison-head">
+        <span></span>
+        <span>Обучение</span>
+        <span>Управление<br />менторингом</span>
+        <span>Личный<br />рабочий поток</span>
+      </div>
+      <div class="comparison-row">
+        <strong>Notion + Telegram</strong><span>—</span><span>—</span><span>частично</span>
+      </div>
+      <div class="comparison-row">
+        <strong>Практикум / Нетология</strong><span>да</span><span>внутри курса</span><span>—</span>
+      </div>
+      <div class="comparison-row featured">
+        <strong>MentorTrack</strong><span>—</span><span>да</span><span>да</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="business" data-title="Бизнес">
+    <div class="slide-number">06</div>
+    <div class="section-heading">
+      <p class="eyebrow">Бизнес-модель</p>
+      <h2>Подписка растёт<br />вместе с практикой ментора</h2>
+    </div>
+
+    <div class="business-grid">
+      <article>
+        <span class="business-index">01</span>
+        <p class="business-label">Кто платит</p>
+        <h3>Ментор<br />или школа</h3>
+      </article>
+      <article>
+        <span class="business-index">02</span>
+        <p class="business-label">За что</p>
+        <h3>За активных<br />учеников</h3>
+      </article>
+      <article>
+        <span class="business-index">03</span>
+        <p class="business-label">Модель</p>
+        <h3>Ежемесячная<br />подписка</h3>
+      </article>
+    </div>
+    <p class="slide-note">Следующий шаг: проверить готовность платить на частных менторах.</p>
+  </section>
+
+  <section class="slide slide-final" id="final" data-title="Финал">
+    <div class="slide-number">07</div>
+    <div class="final-grid">
+      <div>
+        <p class="eyebrow">Почему сейчас</p>
+        <h2>Менторинг растёт.<br />Инструменты за ним<br /><em>не успевают.</em></h2>
+      </div>
+
+      <div class="evidence">
+        <div>
+          <span>Уже есть</span>
+          <strong>Продуктовая логика</strong>
+          <strong>Рабочий backend</strong>
+          <strong>Сценарий использования</strong>
+        </div>
+        <div>
+          <span>Проверяем дальше</span>
+          <strong>Узкий первый сегмент</strong>
+          <strong>Цену подписки</strong>
+          <strong>Удержание менторов</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="final-line">
+      <strong>MentorTrack</strong>
+      <span>Селиванов А. · Тарасов А. · Манов М.</span>
+    </div>
+  </section>
+</main>
+
+<nav class="deck-controls" aria-label="Навигация по презентации">
+  <button type="button" data-prev aria-label="Предыдущий экран">←</button>
+  <div class="progress"><span data-progress></span></div>
+  <button type="button" data-next aria-label="Следующий экран">→</button>
+</nav>
+
+<div class="keyboard-hint">← → для навигации</div>
+{% endblock %}
