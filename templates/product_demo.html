@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MentorTrack Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { min-width: 920px; min-height: 440px; }
+    body { margin: 0; color: #24212b; background: #f6f5f8; font: 12px Arial, sans-serif; overflow: hidden; }
+    .app { display: grid; min-height: 100vh; grid-template-columns: 126px 1fr; }
+    aside { display: flex; padding: 18px 12px; flex-direction: column; background: #fff; border-right: 1px solid #e5e2eb; }
+    .logo { display: grid; width: 38px; height: 38px; margin-bottom: 22px; place-items: center; color: #fff; background: #7c5cff; border-radius: 10px; font-weight: 800; }
+    nav { display: grid; gap: 4px; color: #777181; font-size: 10px; }
+    nav span { padding: 9px; border-radius: 7px; }
+    nav .active { color: #7c5cff; background: #f0ecff; border: 1px solid #ded5ff; }
+    nav i { float: right; padding: 1px 5px; color: #fff; background: #7c5cff; border-radius: 10px; font-style: normal; }
+    .online { margin-top: auto; padding-top: 12px; border-top: 1px solid #e5e2eb; color: #777181; font-size: 9px; }
+    .online b { color: #34a574; }
+    .workspace { min-width: 0; }
+    .topline { display: flex; height: 48px; padding: 0 16px; align-items: center; justify-content: space-between; background: #fff; border-bottom: 1px solid #e5e2eb; font-size: 9px; }
+    .topline small { display: block; color: #918b9a; }
+    .mentor { display: flex; gap: 7px; align-items: center; }
+    .mentor i { display: grid; width: 27px; height: 27px; place-items: center; color: #7c5cff; background: #f0ecff; border-radius: 50%; font-style: normal; font-weight: 700; }
+    main { padding: 16px; background: radial-gradient(circle at 82% 0%, rgba(124,92,255,.1), transparent 42%); }
+    main header { display: flex; align-items: end; justify-content: space-between; }
+    header small { color: #7c5cff; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    h1 { margin: 4px 0 0; font-size: 24px; }
+    button { padding: 8px 11px; border: 0; color: #fff; background: #7c5cff; border-radius: 7px; font: inherit; font-weight: 700; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 16px; }
+    .stat { padding: 11px; background: #fff; border: 1px solid #e5e2eb; border-radius: 9px; }
+    .stat small, .stat strong { display: block; }
+    .stat small { color: #777181; font-size: 8px; }
+    .stat strong { margin-top: 4px; font-size: 20px; }
+    .stat.purple { background: #faf8ff; border-color: #dcd3ff; }
+    .stat.purple strong { color: #7c5cff; }
+    .stat.danger { background: #fff1f1; border-color: #f0c6c6; }
+    .stat.danger strong { color: #d84747; }
+    .cards { display: grid; grid-template-columns: 1.05fr .95fr; gap: 10px; margin-top: 10px; }
+    section { padding: 13px; background: #fff; border: 1px solid #e5e2eb; border-radius: 9px; }
+    .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .pill { padding: 4px 7px; color: #7c5cff; background: #f0ecff; border-radius: 5px; font-size: 8px; }
+    .student { display: flex; gap: 7px; padding-bottom: 9px; align-items: center; border-bottom: 1px solid #eeeaf2; }
+    .avatar { display: grid; width: 26px; height: 26px; place-items: center; color: #7c5cff; background: #f0ecff; border-radius: 50%; font-weight: 700; }
+    .student small { display: block; color: #918b9a; font-size: 8px; }
+    .feedback { margin-top: 9px; padding-left: 8px; border-left: 3px solid #34a574; line-height: 1.35; }
+    .feedback.warn { border-color: #e49a37; }
+    .feedback b { display: block; margin-bottom: 2px; }
+    .feedback p { margin: 0; color: #777181; font-size: 9px; }
+    section > button { width: 100%; margin-top: 11px; }
+    .risk { background: #fffafa; border-color: #efcaca; }
+    .risk-score { color: #d84747; font-size: 18px; }
+    .risk-box { padding: 11px; background: #fff1f1; border: 1px solid #efcaca; border-radius: 7px; }
+    .risk-box > small { color: #d84747; font-weight: 700; }
+    .risk-box > strong { display: block; margin-top: 4px; }
+    .risk-box p { margin: 7px 0 0; color: #777181; font-size: 9px; line-height: 1.35; }
+    .risk-box button { margin-top: 10px; }
+    .secondary-risk { display: flex; margin-top: 7px; padding: 9px; align-items: center; justify-content: space-between; background: #fff8e8; border: 1px solid #f1d79f; border-radius: 7px; }
+    .secondary-risk small { display: block; color: #b86d16; font-size: 7px; }
+    .progress-card { margin-top: 10px; }
+    .progress-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .person { display: grid; grid-template-columns: 25px 1fr auto; gap: 6px; align-items: center; font-size: 8px; }
+    .person i { display: grid; width: 25px; height: 25px; place-items: center; color: #7c5cff; background: #f0ecff; border-radius: 50%; font-style: normal; }
+    .bar { display: block; height: 4px; margin-top: 4px; overflow: hidden; background: #ebe8ef; border-radius: 3px; }
+    .bar u { display: block; height: 100%; background: #7c5cff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div class="logo">M</div>
+      <nav>
+        <span class="active">Обзор</span>
+        <span>Менти</span>
+        <span>Проверки <i>3</i></span>
+        <span>Планы</span>
+        <span>Аналитика</span>
+      </nav>
+      <div class="online"><b>●</b> Бот работает</div>
+    </aside>
+    <div class="workspace">
+      <div class="topline">
+        <span>Рабочее пространство<br><b>MentorTrack Demo</b></span>
+        <span class="mentor"><i>А</i><span><b>Наставник</b><small>Онлайн</small></span></span>
+      </div>
+      <main>
+        <header>
+          <div><small>Сводка на сегодня</small><h1>Добрый день</h1></div>
+          <button>+ Новый план</button>
+        </header>
+        <div class="stats">
+          <div class="stat"><small>Активные менти</small><strong>8</strong></div>
+          <div class="stat purple"><small>Ждут проверки</small><strong>3</strong></div>
+          <div class="stat danger"><small>Риск ухода</small><strong>2</strong></div>
+          <div class="stat"><small>Сдано вовремя</small><strong>84%</strong></div>
+        </div>
+        <div class="cards">
+          <section>
+            <div class="section-head"><strong>AI проверит ДЗ</strong><span class="pill">Черновик готов</span></div>
+            <div class="student"><span class="avatar">А</span><span><b>Алексей · REST API</b><small>Отправлено 12 минут назад</small></span></div>
+            <div class="feedback"><b>Сильная сторона</b><p>Хорошо разделены handler и service, есть тесты.</p></div>
+            <div class="feedback warn"><b>Доработать</b><p>Добавить защиту конкурентного обновления.</p></div>
+            <button>Открыть черновик</button>
+          </section>
+          <section class="risk">
+            <div class="section-head"><strong>Риск ухода</strong><span class="pill">Все ученики</span></div>
+            <div class="risk-box">
+              <div class="section-head"><span><small>ВЫСОКИЙ РИСК</small><strong>Мария Соколова</strong></span><b class="risk-score">78%</b></div>
+              <p>Не отвечает 6 дней · 2 пропущенных дедлайна · активность −64%</p>
+              <button>Написать в Telegram</button>
+            </div>
+            <div class="secondary-risk"><span><small>НУЖНО ВНИМАНИЕ</small><b>Игорь Лебедев</b></span><b>46%</b></div>
+          </section>
+        </div>
+        <section class="progress-card">
+          <div class="section-head"><strong>Прогресс менти</strong><span class="pill">Все менти</span></div>
+          <div class="progress-grid">
+            <div class="person"><i>А</i><span><b>Алексей</b><span class="bar"><u style="width:72%"></u></span></span><b>72%</b></div>
+            <div class="person"><i>М</i><span><b>Мария</b><span class="bar"><u style="width:38%"></u></span></span><b>38%</b></div>
+            <div class="person"><i>И</i><span><b>Игорь</b><span class="bar"><u style="width:61%"></u></span></span><b>61%</b></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

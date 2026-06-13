@@ -305,145 +305,174 @@ h2 em {
   font-size: 14px;
 }
 
-.product-demo {
+.product-story {
   display: grid;
-  grid-template-columns: 56px 1fr 300px;
-  min-height: 330px;
+  grid-template-columns: minmax(0, 0.88fr) 72px minmax(0, 1.12fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.product-channel {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  padding: 18px;
   border: 1px solid var(--ink);
   background: var(--white);
-  box-shadow: 12px 12px 0 var(--ink);
+  box-shadow: 7px 7px 0 var(--ink);
 }
 
-.demo-sidebar {
+.channel-copy {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 14px 0;
-  flex-direction: column;
-  color: var(--white);
-  background: var(--ink);
-}
-
-.demo-sidebar > span:not(.demo-logo) {
-  width: 18px;
-  height: 3px;
-  background: #77766f;
-}
-
-.demo-sidebar > span.active {
-  background: var(--accent);
-}
-
-.demo-logo {
-  display: grid;
-  width: 28px;
-  height: 28px;
+  gap: 10px 18px;
   margin-bottom: 16px;
-  place-items: center;
-  background: var(--accent);
-  font-size: 12px;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.channel-tag {
+  color: var(--accent);
+  font-size: 10px;
   font-weight: 700;
-}
-
-.demo-main {
-  padding: 28px;
-}
-
-.demo-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--line);
-}
-
-.demo-header small {
-  color: var(--muted);
-}
-
-.demo-header h3 {
-  margin: 4px 0 0;
-  font-size: 28px;
-}
-
-.demo-avatar {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border-radius: 50%;
-  background: #dedbd0;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.student {
-  display: grid;
-  grid-template-columns: 12px 0.7fr 1.4fr auto;
-  gap: 14px;
-  align-items: center;
-  padding: 21px 10px;
-  border-bottom: 1px solid var(--line);
-  font-size: 14px;
-}
-
-.student > span:not(.status) {
-  color: var(--muted);
-}
-
-.student.attention {
-  background: #fff0eb;
-}
-
-.status {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.status.good {
-  background: #26956a;
-}
-
-.status.warn {
-  background: var(--accent);
-}
-
-.demo-alert {
-  display: flex;
-  padding: 30px;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--white);
-  background: var(--accent);
-}
-
-.demo-alert span {
-  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
 }
 
-.demo-alert strong {
-  margin-top: 28px;
-  font-size: 26px;
-  line-height: 1.05;
+.channel-copy h3 {
+  margin: 0;
+  font-size: clamp(19px, 1.7vw, 27px);
+  letter-spacing: -0.035em;
 }
 
-.demo-alert p {
-  margin: 14px 0 28px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+.channel-copy p {
+  width: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
   line-height: 1.4;
 }
 
-.demo-alert button {
-  padding: 0;
-  border: 0;
+.telegram-shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  min-height: 0;
+}
+
+.telegram-shots figure {
+  position: relative;
+  min-width: 0;
+  height: 225px;
+  margin: 0;
+  overflow: hidden;
+  background: #17212b;
+}
+
+.telegram-shots img,
+.web-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.telegram-shots img {
+  object-position: top center;
+}
+
+.telegram-shots figcaption {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  padding: 8px 10px;
   color: var(--white);
-  background: none;
+  background: rgba(23, 23, 19, 0.86);
+  font-size: 10px;
+}
+
+.telegram-shots figcaption b {
+  margin-right: 8px;
+  color: #ff7658;
+}
+
+.channel-bridge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--accent);
+}
+
+.channel-bridge span {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+}
+
+.channel-bridge i {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-style: normal;
+}
+
+.web-shot {
+  position: relative;
+  min-height: 225px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.web-shot iframe {
+  display: block;
+  width: 200%;
+  height: 200%;
+  border: 0;
+  background: #f6f5f8;
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+
+.proof-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 10px 12px;
+  color: var(--white);
+  background: var(--accent);
+  font-size: 10px;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.proof-badge b {
+  display: block;
+  font-size: 18px;
+}
+
+.product-outcome {
+  display: flex;
+  gap: 24px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 2px solid var(--ink);
+  align-items: baseline;
+}
+
+.product-outcome span {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 11px;
   font-weight: 700;
-  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.product-outcome strong {
+  font-size: 14px;
+  line-height: 1.35;
 }
 
 .comparison {
@@ -686,13 +715,22 @@ h2 em {
     border-bottom: 1px solid var(--line);
   }
 
-  .product-demo {
-    grid-template-columns: 44px 1fr;
+  .product-story {
+    grid-template-columns: 1fr;
   }
 
-  .demo-alert {
-    grid-column: 1 / -1;
-    min-height: 170px;
+  .channel-bridge {
+    min-height: 36px;
+    flex-direction: row;
+  }
+
+  .channel-bridge span {
+    margin: 0 10px 0 0;
+    writing-mode: horizontal-tb;
+  }
+
+  .channel-bridge i {
+    transform: rotate(90deg);
   }
 
   .comparison-head,
@@ -741,17 +779,10 @@ h2 em {
     margin-top: 32px;
   }
 
-  .product-demo {
-    min-height: 286px;
-  }
-
-  .demo-main {
-    padding: 20px 28px;
-  }
-
-  .student {
-    padding-top: 16px;
-    padding-bottom: 16px;
+  .telegram-shots figure,
+  .web-shot {
+    height: 190px;
+    min-height: 190px;
   }
 
   .business-grid article {
@@ -804,25 +835,24 @@ h2 em {
     margin: 14px 0 4px;
   }
 
-  .product-demo {
+  .product-channel {
+    padding: 12px;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+
+  .telegram-shots figure,
+  .web-shot {
+    height: 180px;
+    min-height: 180px;
+  }
+
+  .product-outcome {
     display: block;
-    box-shadow: 6px 6px 0 var(--ink);
   }
 
-  .demo-sidebar {
-    display: none;
-  }
-
-  .demo-main {
-    padding: 18px;
-  }
-
-  .student {
-    grid-template-columns: 10px 0.8fr 1.2fr;
-  }
-
-  .student b {
-    display: none;
+  .product-outcome span {
+    display: block;
+    margin-bottom: 8px;
   }
 
   .comparison {
