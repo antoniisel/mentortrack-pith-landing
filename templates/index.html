@@ -9,9 +9,9 @@
   <section class="slide slide-hero" id="start" data-title="Продукт">
     <div class="slide-number">01</div>
     <div class="hero-copy">
-      <p class="eyebrow">Рабочая система для частного ментора</p>
-      <h1>Вести в 2 раза больше учеников.<br><em>Не теряя качество.</em></h1>
-      <p class="lead">MentorTrack объединяет план, задания, прогресс и обратную связь в одном контексте ученика.</p>
+      <p class="eyebrow">MentorTrack · SaaS для частных менторов</p>
+      <h1>Больше учеников.<br><em>Тот же уровень внимания.</em></h1>
+      <p class="lead">План, задания, фидбек и прогресс — в одном рабочем контексте вместо чатов, таблиц и памяти.</p>
     </div>
     <div class="hero-proof"><p>Первый сегмент</p><strong>IT и digital-менторы</strong><span>5-10 учеников · практика 1-на-1</span></div>
     <a class="continue-link" href="#problem">Начать питч <span>↓</span></a>
@@ -30,10 +30,10 @@
 
   <section class="slide" id="audience" data-title="Аудитория">
     <div class="slide-number">03</div>
-    <div class="section-heading compact"><p class="eyebrow">Первый покупатель</p><h2>Уже зарабатывает.<br><em>Уже уперся в потолок.</em></h2></div>
+    <div class="section-heading compact"><p class="eyebrow">Почему купит сейчас</p><h2>Следующий ученик —<br><em>это уже операционная нагрузка</em></h2></div>
     <div class="persona">
       <div class="persona-main"><span class="persona-icon">5—10</span><h3>учеников одновременно</h3><p>Частный ментор в IT или digital, работающий 1-на-1</p></div>
-      <div class="persona-signals"><p><b>Есть</b> регулярный доход от менторства</p><p><b>Использует</b> Telegram, Notion, Docs и таблицы</p><p><b>Готов платить</b> 1 500-3 000 ₽ в месяц</p></div>
+      <div class="persona-signals"><p><b>Момент покупки</b> текущий процесс мешает взять новых учеников</p><p><b>Ценность</b> меньше координации без потери персонального подхода</p><p><b>Готов платить</b> 1 500-3 000 ₽ в месяц</p></div>
     </div>
   </section>
 
@@ -54,8 +54,8 @@
     <div class="section-heading compact"><p class="eyebrow">Работающий прототип</p><h2>Один продукт — в Telegram и Web UI</h2></div>
     <div class="product-story">
       <article class="product-channel"><div class="channel-copy"><span class="channel-tag">Telegram · в потоке общения</span><h3>План и проверка с телефона</h3></div><div class="telegram-shots">
-        <figure><img src="{{ url_for('static', filename='img/product/plan-created.png') }}" alt="План в Telegram"><figcaption>План создан</figcaption></figure>
-        <figure><img src="{{ url_for('static', filename='img/product/review.png') }}" alt="Проверка в Telegram"><figcaption>Работа проверена</figcaption></figure>
+        <figure><img src="{{ url_for('static', filename='img/product/plan-created.png') }}" alt="План в Telegram"><figcaption><b>01</b><span>План создан</span></figcaption></figure>
+        <figure><img src="{{ url_for('static', filename='img/product/review.png') }}" alt="Проверка в Telegram"><figcaption><b>02</b><span>Работа проверена</span></figcaption></figure>
       </div></article>
       <div class="channel-bridge"><span>единые данные</span><i>→</i></div>
       <article class="product-channel"><div class="channel-copy"><span class="channel-tag">Web UI · общая картина</span><h3>Кому нужно внимание сейчас</h3></div><div class="web-shot"><iframe src="{{ url_for('product_demo') }}" title="Рабочий экран MentorTrack"></iframe><span class="proof-badge"><b>10 секунд</b><small>от сигнала к действию</small></span></div></article>
@@ -64,13 +64,25 @@
 
   <section class="slide" id="competition" data-title="Конкуренты">
     <div class="slide-number">06</div>
-    <div class="section-heading compact"><p class="eyebrow">Позиционирование</p><h2>Не LMS.<br><em>Система ежедневной работы.</em></h2></div>
+    <div class="section-heading compact"><p class="eyebrow">Позиционирование</p><h2>Главный конкурент —<br><em>привычная связка инструментов</em></h2></div>
     <div class="comparison">
-      <div class="comparison-head"><span>Альтернатива</span><span>Менторинг 1-на-1</span><span>Единый цикл</span><span>AI знает ученика</span></div>
-      <div class="comparison-row"><strong>Notion + Telegram</strong><span>частично</span><span>нет</span><span>нет</span></div>
-      <div class="comparison-row"><strong>Trello / ClickUp</strong><span>нет</span><span>частично</span><span>нет</span></div>
-      <div class="comparison-row"><strong>GetCourse / Teachable</strong><span>курсы</span><span>частично</span><span>нет</span></div>
-      <div class="comparison-row featured"><strong>MentorTrack</strong><span>да</span><span>да</span><span>да</span></div>
+      <div class="comparison-head"><span>Альтернатива</span><span>Контекст 1-на-1</span><span>Единый цикл</span><span>AI знает ученика</span></div>
+      <div class="comparison-row">
+        <strong class="competitor"><span class="competitor-marks"><i class="mark"><img src="{{ url_for('static', filename='img/logos/notion.svg') }}" alt="Notion"></i><i class="mark"><img src="{{ url_for('static', filename='img/logos/telegram.svg') }}" alt="Telegram"></i></span><span>Notion + Telegram<small>текущий процесс</small></span></strong>
+        <span>частично</span><span>нет</span><span>нет</span>
+      </div>
+      <div class="comparison-row">
+        <strong class="competitor"><span class="competitor-marks"><i class="mark"><img src="{{ url_for('static', filename='img/logos/trello.svg') }}" alt="Trello"></i><i class="mark"><img src="{{ url_for('static', filename='img/logos/clickup.svg') }}" alt="ClickUp"></i></span><span>Trello / ClickUp<small>управление задачами</small></span></strong>
+        <span>нет</span><span>частично</span><span>нет</span>
+      </div>
+      <div class="comparison-row">
+        <strong class="competitor"><span class="competitor-marks"><i class="mark"><img src="{{ url_for('static', filename='img/logos/getcourse.png') }}" alt="GetCourse"></i><i class="mark"><img src="{{ url_for('static', filename='img/logos/teachable.png') }}" alt="Teachable"></i></span><span>GetCourse / Teachable<small>курсы и контент</small></span></strong>
+        <span>частично</span><span>частично</span><span>нет</span>
+      </div>
+      <div class="comparison-row featured">
+        <strong class="competitor"><span class="competitor-marks"><i class="mark mentortrack">M</i></span><span>MentorTrack<small>ежедневная работа ментора</small></span></strong>
+        <span>да</span><span>да</span><span>да</span>
+      </div>
     </div>
   </section>
 
@@ -87,13 +99,13 @@
 
   <section class="slide" id="market" data-title="Рынок">
     <div class="slide-number">08</div>
-    <div class="section-heading compact"><p class="eyebrow">Bottom-up оценка · Россия</p><h2>Узкий старт.<br><em>Достаточный рынок.</em></h2></div>
+    <div class="section-heading compact"><p class="eyebrow">Bottom-up гипотеза · Россия</p><h2>Узкий старт.<br><em>Рынок проверяем через продажи.</em></h2></div>
     <div class="market-funnel">
       <article><span>TAM</span><strong>20-50 тыс.</strong><p>0,72-1,79 млрд ₽ в год</p></article>
       <article><span>SAM</span><strong>5-20 тыс.</strong><p>0,18-0,72 млрд ₽ в год</p></article>
       <article class="som"><span>SOM · 3 года</span><strong>1 000</strong><p>35,9 млн ₽ ARR</p></article>
     </div>
-    <p class="slide-note">Расчет от ~1 млн IT-специалистов; ключевые доли проверяем на MVP.</p>
+    <p class="slide-note">TAM и SAM — оценка на допущениях. На MVP проверяем конверсию узкого сегмента в оплату.</p>
   </section>
 
   <section class="slide" id="roadmap" data-title="MVP">
@@ -108,8 +120,8 @@
 
   <section class="slide slide-final" id="ask" data-title="Инвестиции">
     <div class="slide-number">10</div>
-    <div class="ask-grid"><div><p class="eyebrow">Инвестиционный запрос</p><h2><em>3 млн ₽</em><br>на 3 месяца</h2></div><div class="ask-result"><span>На выходе</span><strong>Платный MVP</strong><strong>Первые транзакции</strong><strong>Данные об удержании</strong><strong>Подтвержденная экономика</strong></div></div>
-    <div class="final-line"><strong>MentorTrack</strong><span>Следующая инвестиция покупает проверку бизнеса, а не разработку идеи.</span></div>
+    <div class="ask-grid"><div><p class="eyebrow">Инвестиционный запрос</p><h2><em>3 млн ₽</em><br>на 3 месяца</h2></div><div class="ask-result"><span>На выходе</span><strong>10-15 менторов в пилоте</strong><strong>Первые транзакции</strong><strong>Сигнал повторного использования</strong><strong>Решение о масштабировании</strong></div></div>
+    <div class="final-line"><strong>MentorTrack</strong><span>Инвестиция покупает проверку спроса и удержания — не разработку идеи.</span></div>
   </section>
 
   <section class="slide supplementary" id="market-detail" data-title="Расчет рынка">
@@ -122,7 +134,7 @@
   <section class="slide supplementary" id="budget" data-title="Бюджет">
     <div class="slide-number">S2</div>
     <div class="section-heading compact"><p class="eyebrow">Supplementary · инвестиции</p><h2>Куда идут 3 млн ₽</h2></div>
-    <div class="budget-layout"><div class="budget-bar"><span style="--share:50%">Разработка <b>1,50 млн</b></span><span style="--share:13.33%">Product / UX <b>0,40</b></span><span style="--share:13.33%">Пилот <b>0,40</b></span><span style="--share:8.33%">Infra + AI <b>0,25</b></span><span style="--share:5%">Legal <b>0,15</b></span><span style="--share:10%">Резерв <b>0,30</b></span></div><div class="budget-total"><span>Runway</span><strong>3 месяца</strong><span>Команда</span><strong>2 dev + product/UX + part-time growth</strong></div></div>
+    <div class="budget-layout"><div class="budget-bar"><span style="--share:50%">Разработка <b>1,50 млн</b></span><span style="--share:13.33%">Product / UX <b>0,40</b></span><span style="--share:13.33%">Пилот <b>0,40</b></span><span style="--share:8.33%">Infra + AI <b>0,25</b></span><span style="--share:5%">Legal <b>0,15</b></span><span style="--share:10%">Резерв <b>0,30</b></span></div><div class="budget-total"><span>Runway</span><strong>3 месяца</strong><span>Разработка</span><strong>2 dev · стабильность, платежи, аналитика, AI</strong><span>Остальная команда</span><strong>Product/UX + part-time growth</strong></div></div>
   </section>
 </main>
 
