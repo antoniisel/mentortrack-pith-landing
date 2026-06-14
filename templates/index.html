@@ -1,245 +1,131 @@
 {% extends "base.html" %}
-
 {% block content %}
 <header class="topbar">
-  <a class="brand" href="#start" aria-label="К первому экрану">
-    <span class="brand-mark">M</span>
-    <span>MentorTrack</span>
-  </a>
-
-  <div class="topbar-meta">
-    <span class="topbar-label">Pitch deck</span>
-    <span><strong data-current>01</strong> / <span data-total>07</span></span>
-  </div>
+  <a class="brand" href="#start"><span class="brand-mark">M</span><span>MentorTrack</span></a>
+  <div class="topbar-meta"><span class="topbar-label">Pitch deck</span><span><strong data-current>01</strong> / <span data-total>12</span></span></div>
 </header>
 
 <main class="deck" data-deck>
   <section class="slide slide-hero" id="start" data-title="Продукт">
     <div class="slide-number">01</div>
     <div class="hero-copy">
-      <p class="eyebrow">Рабочее пространство для менторинга</p>
-      <h1>Меньше контроля.<br /><em>Больше прогресса.</em></h1>
-      <p class="lead">
-        MentorTrack собирает план, домашки и обратную связь
-        в один понятный процесс.
-      </p>
+      <p class="eyebrow">Рабочая система для частного ментора</p>
+      <h1>Вести в 2 раза больше учеников.<br><em>Не теряя качество.</em></h1>
+      <p class="lead">MentorTrack объединяет план, задания, прогресс и обратную связь в одном контексте ученика.</p>
     </div>
-
-    <div class="hero-proof">
-      <p>Для кого</p>
-      <strong>Частные менторы и небольшие школы</strong>
-      <span>которые ведут учеников регулярно</span>
-    </div>
-
-    <a class="continue-link" href="#problem">
-      Начать питч <span aria-hidden="true">↓</span>
-    </a>
+    <div class="hero-proof"><p>Первый сегмент</p><strong>IT и digital-менторы</strong><span>5-10 учеников · практика 1-на-1</span></div>
+    <a class="continue-link" href="#problem">Начать питч <span>↓</span></a>
   </section>
 
   <section class="slide" id="problem" data-title="Проблема">
     <div class="slide-number">02</div>
-    <div class="section-heading">
-      <p class="eyebrow">Проблема</p>
-      <h2>Обучение распадается<br />между инструментами</h2>
+    <div class="section-heading compact"><p class="eyebrow">15 глубинных интервью</p><h2>Рост практики ломает<br><em>ручной процесс</em></h2></div>
+    <div class="research-grid">
+      <div class="tool-stack"><span>Telegram</span><span>Notion</span><span>Sheets</span><span>Память</span></div>
+      <article><strong>87%</strong><p>работают сразу в нескольких инструментах</p></article>
+      <article><strong>80%</strong><p>считают проверку и фидбек трудоемкими</p></article>
+      <article><strong>73%</strong><p>теряли контроль над прогрессом учеников</p></article>
     </div>
+  </section>
 
-    <div class="problem-layout">
-      <div class="tool-chain" aria-label="Разрозненные инструменты">
-        <span>Telegram</span>
-        <i>+</i>
-        <span>Notion</span>
-        <i>+</i>
-        <span>Sheets</span>
-        <i>+</i>
-        <span>Память</span>
-      </div>
-      <div class="impact">
-        <p class="impact-label">В результате</p>
-        <ul>
-          <li><strong>Ментор</strong> вручную контролирует сроки</li>
-          <li><strong>Ученик</strong> теряет следующий шаг</li>
-          <li><strong>Прогресс</strong> замечают слишком поздно</li>
-        </ul>
-      </div>
+  <section class="slide" id="audience" data-title="Аудитория">
+    <div class="slide-number">03</div>
+    <div class="section-heading compact"><p class="eyebrow">Первый покупатель</p><h2>Уже зарабатывает.<br><em>Уже уперся в потолок.</em></h2></div>
+    <div class="persona">
+      <div class="persona-main"><span class="persona-icon">5—10</span><h3>учеников одновременно</h3><p>Частный ментор в IT или digital, работающий 1-на-1</p></div>
+      <div class="persona-signals"><p><b>Есть</b> регулярный доход от менторства</p><p><b>Использует</b> Telegram, Notion, Docs и таблицы</p><p><b>Готов платить</b> 1 500-3 000 ₽ в месяц</p></div>
     </div>
   </section>
 
   <section class="slide" id="solution" data-title="Решение">
-    <div class="slide-number">03</div>
-    <div class="section-heading">
-      <p class="eyebrow">Решение</p>
-      <h2>Один цикл.<br />Один источник правды.</h2>
-    </div>
-
-    <div class="flow">
-      <article>
-        <span>01</span>
-        <h3>План</h3>
-        <p>Цель, задачи и дедлайны</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h3>Работа</h3>
-        <p>Домашка в контексте задачи</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h3>Фидбек</h3>
-        <p>Быстрый ответ ментора</p>
-      </article>
-      <article>
-        <span>04</span>
-        <h3>Контроль</h3>
-        <p>Статус и следующий шаг</p>
-      </article>
-    </div>
-
-    <p class="slide-note">Система не заменяет ментора. Она убирает операционную рутину.</p>
-  </section>
-
-  <section class="slide" id="product" data-title="Продукт">
     <div class="slide-number">04</div>
-    <div class="section-heading compact">
-      <p class="eyebrow">04 · Продукт и пользовательский опыт</p>
-      <h2>Один продукт —<br />в Telegram и Web UI</h2>
+    <div class="section-heading compact"><p class="eyebrow">MentorTrack</p><h2>Один контекст ученика.<br><em>Один рабочий цикл.</em></h2></div>
+    <div class="flow">
+      <article><span>01</span><h3>Цель и план</h3><p>Маршрут под конкретного ученика</p></article>
+      <article><span>02</span><h3>Задание</h3><p>Работа и дедлайн в контексте цели</p></article>
+      <article><span>03</span><h3>AI-фидбек</h3><p>Черновик, который проверяет ментор</p></article>
+      <article><span>04</span><h3>Прогресс</h3><p>Риски, навыки и следующий шаг</p></article>
     </div>
-
-    <div class="product-story">
-      <article class="product-channel telegram-channel">
-        <div class="channel-copy">
-          <span class="channel-tag">Telegram · мобильность</span>
-          <h3>Весь продукт всегда под рукой</h3>
-          <p>Тот же функционал с телефона, уведомления в привычном канале и доступ для персонального агента OpenClaw.</p>
-        </div>
-        <div class="telegram-shots" aria-label="Реальные экраны Telegram-бота">
-          <figure>
-            <img src="{{ url_for('static', filename='img/product/plan-created.png') }}" alt="Созданный учебный план в Telegram" />
-            <figcaption><b>01</b> План готов</figcaption>
-          </figure>
-          <figure>
-            <img src="{{ url_for('static', filename='img/product/review.png') }}" alt="Проверка домашней работы в Telegram" />
-            <figcaption><b>02</b> Работа проверена</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <div class="channel-bridge" aria-hidden="true">
-        <span>единые данные</span>
-        <i>→</i>
-      </div>
-
-      <article class="product-channel web-channel">
-        <div class="channel-copy">
-          <span class="channel-tag">Web UI · полный контроль</span>
-          <h3>Тот же продукт на большом экране</h3>
-          <p>Планы, проверки и аналитика доступны в удобном интерфейсе — пользователь сам выбирает формат работы.</p>
-        </div>
-        <div class="web-shot">
-          <iframe
-            src="{{ url_for('product_demo') }}"
-            title="Рабочий экран MentorTrack"
-            loading="eager"
-          ></iframe>
-          <span class="proof-badge"><b>10 секунд</b><small>от данных к действию</small></span>
-        </div>
-      </article>
-    </div>
-
-    <div class="product-outcome">
-      <span>Два интерфейса · единые данные</span>
-      <strong>Один функционал в Web UI и Telegram: план → задание → работа → обратная связь → контроль прогресса</strong>
-    </div>
+    <p class="principle"><b>AI предлагает.</b> Ментор принимает решение.</p>
   </section>
 
-  <section class="slide" id="competition" data-title="Рынок">
+  <section class="slide product-slide" id="product" data-title="Продукт">
     <div class="slide-number">05</div>
-    <div class="section-heading compact">
-      <p class="eyebrow">Конкуренты и альтернативы</p>
-      <h2>Не ещё одна LMS.<br />Инструмент ежедневной работы.</h2>
-    </div>
-
-    <div class="comparison">
-      <div class="comparison-head">
-        <span></span>
-        <span>Обучение</span>
-        <span>Управление<br />менторингом</span>
-        <span>Личный<br />рабочий поток</span>
-      </div>
-      <div class="comparison-row">
-        <strong>Notion + Telegram</strong><span>—</span><span>—</span><span>частично</span>
-      </div>
-      <div class="comparison-row">
-        <strong>Практикум / Нетология</strong><span>да</span><span>внутри курса</span><span>—</span>
-      </div>
-      <div class="comparison-row featured">
-        <strong>MentorTrack</strong><span>—</span><span>да</span><span>да</span>
-      </div>
+    <div class="section-heading compact"><p class="eyebrow">Работающий прототип</p><h2>Один продукт — в Telegram и Web UI</h2></div>
+    <div class="product-story">
+      <article class="product-channel"><div class="channel-copy"><span class="channel-tag">Telegram · в потоке общения</span><h3>План и проверка с телефона</h3></div><div class="telegram-shots">
+        <figure><img src="{{ url_for('static', filename='img/product/plan-created.png') }}" alt="План в Telegram"><figcaption>План создан</figcaption></figure>
+        <figure><img src="{{ url_for('static', filename='img/product/review.png') }}" alt="Проверка в Telegram"><figcaption>Работа проверена</figcaption></figure>
+      </div></article>
+      <div class="channel-bridge"><span>единые данные</span><i>→</i></div>
+      <article class="product-channel"><div class="channel-copy"><span class="channel-tag">Web UI · общая картина</span><h3>Кому нужно внимание сейчас</h3></div><div class="web-shot"><iframe src="{{ url_for('product_demo') }}" title="Рабочий экран MentorTrack"></iframe><span class="proof-badge"><b>10 секунд</b><small>от сигнала к действию</small></span></div></article>
     </div>
   </section>
 
-  <section class="slide" id="business" data-title="Бизнес">
+  <section class="slide" id="competition" data-title="Конкуренты">
     <div class="slide-number">06</div>
-    <div class="section-heading">
-      <p class="eyebrow">Бизнес-модель</p>
-      <h2>Подписка растёт<br />вместе с практикой ментора</h2>
+    <div class="section-heading compact"><p class="eyebrow">Позиционирование</p><h2>Не LMS.<br><em>Система ежедневной работы.</em></h2></div>
+    <div class="comparison">
+      <div class="comparison-head"><span>Альтернатива</span><span>Менторинг 1-на-1</span><span>Единый цикл</span><span>AI знает ученика</span></div>
+      <div class="comparison-row"><strong>Notion + Telegram</strong><span>частично</span><span>нет</span><span>нет</span></div>
+      <div class="comparison-row"><strong>Trello / ClickUp</strong><span>нет</span><span>частично</span><span>нет</span></div>
+      <div class="comparison-row"><strong>GetCourse / Teachable</strong><span>курсы</span><span>частично</span><span>нет</span></div>
+      <div class="comparison-row featured"><strong>MentorTrack</strong><span>да</span><span>да</span><span>да</span></div>
     </div>
-
-    <div class="business-grid">
-      <article>
-        <span class="business-index">01</span>
-        <p class="business-label">Кто платит</p>
-        <h3>Ментор<br />или школа</h3>
-      </article>
-      <article>
-        <span class="business-index">02</span>
-        <p class="business-label">За что</p>
-        <h3>За активных<br />учеников</h3>
-      </article>
-      <article>
-        <span class="business-index">03</span>
-        <p class="business-label">Модель</p>
-        <h3>Ежемесячная<br />подписка</h3>
-      </article>
-    </div>
-    <p class="slide-note">Следующий шаг: проверить готовность платить на частных менторах.</p>
   </section>
 
-  <section class="slide slide-final" id="final" data-title="Финал">
+  <section class="slide" id="business" data-title="Монетизация">
     <div class="slide-number">07</div>
-    <div class="final-grid">
-      <div>
-        <p class="eyebrow">Почему сейчас</p>
-        <h2>Менторинг растёт.<br />Инструменты за ним<br /><em>не успевают.</em></h2>
-      </div>
-
-      <div class="evidence">
-        <div>
-          <span>Уже есть</span>
-          <strong>Продуктовая логика</strong>
-          <strong>Рабочий backend</strong>
-          <strong>Сценарий использования</strong>
-        </div>
-        <div>
-          <span>Проверяем дальше</span>
-          <strong>Узкий первый сегмент</strong>
-          <strong>Цену подписки</strong>
-          <strong>Удержание менторов</strong>
-        </div>
-      </div>
+    <div class="section-heading compact"><p class="eyebrow">SaaS-подписка</p><h2>Окупается одним<br><em>дополнительным учеником</em></h2></div>
+    <div class="pricing">
+      <article><span>Starter</span><strong>1 490 ₽</strong><p>Небольшая практика</p></article>
+      <article class="featured-card"><span>Pro · основной</span><strong>2 990 ₽</strong><p>До 15 учеников + AI</p></article>
+      <article><span>Team</span><strong>от 7 990 ₽</strong><p>Школы и команды</p></article>
     </div>
+    <div class="economics"><span>Pro: себестоимость <b>550-950 ₽</b></span><span>Валовая маржа <b>68-82%</b></span><span>WTP из интервью <b>1 500-3 000 ₽</b></span></div>
+  </section>
 
-    <div class="final-line">
-      <strong>MentorTrack</strong>
-      <span>Селиванов А. · Тарасов А. · Манов М.</span>
+  <section class="slide" id="market" data-title="Рынок">
+    <div class="slide-number">08</div>
+    <div class="section-heading compact"><p class="eyebrow">Bottom-up оценка · Россия</p><h2>Узкий старт.<br><em>Достаточный рынок.</em></h2></div>
+    <div class="market-funnel">
+      <article><span>TAM</span><strong>20-50 тыс.</strong><p>0,72-1,79 млрд ₽ в год</p></article>
+      <article><span>SAM</span><strong>5-20 тыс.</strong><p>0,18-0,72 млрд ₽ в год</p></article>
+      <article class="som"><span>SOM · 3 года</span><strong>1 000</strong><p>35,9 млн ₽ ARR</p></article>
     </div>
+    <p class="slide-note">Расчет от ~1 млн IT-специалистов; ключевые доли проверяем на MVP.</p>
+  </section>
+
+  <section class="slide" id="roadmap" data-title="MVP">
+    <div class="slide-number">09</div>
+    <div class="section-heading compact"><p class="eyebrow">Путь к платному MVP</p><h2>Три месяца.<br><em>Три проверяемых результата.</em></h2></div>
+    <div class="timeline">
+      <article><span>Месяц 1</span><h3>Стабильность</h3><p>Онбординг, AI-сценарии, продуктовая аналитика</p></article>
+      <article><span>Месяц 2</span><h3>Закрытый пилот</h3><p>10-15 активных менторов и перенос первых учеников</p></article>
+      <article><span>Месяц 3</span><h3>Платная проверка</h3><p>Транзакции, еженедельное использование и удержание</p></article>
+    </div>
+  </section>
+
+  <section class="slide slide-final" id="ask" data-title="Инвестиции">
+    <div class="slide-number">10</div>
+    <div class="ask-grid"><div><p class="eyebrow">Инвестиционный запрос</p><h2><em>3 млн ₽</em><br>на 3 месяца</h2></div><div class="ask-result"><span>На выходе</span><strong>Платный MVP</strong><strong>Первые транзакции</strong><strong>Данные об удержании</strong><strong>Подтвержденная экономика</strong></div></div>
+    <div class="final-line"><strong>MentorTrack</strong><span>Следующая инвестиция покупает проверку бизнеса, а не разработку идеи.</span></div>
+  </section>
+
+  <section class="slide supplementary" id="market-detail" data-title="Расчет рынка">
+    <div class="slide-number">S1</div>
+    <div class="section-heading compact"><p class="eyebrow">Supplementary · рынок</p><h2>Как рассчитан SAM</h2></div>
+    <div class="calc-chain"><article><strong>~1 млн</strong><p>IT-специалистов</p></article><i>× 2-5%</i><article><strong>20-50 тыс.</strong><p>монетизируют менторство</p></article><i>× 25-40%</i><article><strong>5-20 тыс.</strong><p>активный сегмент</p></article></div>
+    <div class="assumptions"><span><b>Внешние данные:</b> база IT-специалистов</span><span><b>15 интервью:</b> сегмент и WTP</span><span><b>Гипотеза MVP:</b> доли и конверсия</span></div>
+  </section>
+
+  <section class="slide supplementary" id="budget" data-title="Бюджет">
+    <div class="slide-number">S2</div>
+    <div class="section-heading compact"><p class="eyebrow">Supplementary · инвестиции</p><h2>Куда идут 3 млн ₽</h2></div>
+    <div class="budget-layout"><div class="budget-bar"><span style="--share:50%">Разработка <b>1,50 млн</b></span><span style="--share:13.33%">Product / UX <b>0,40</b></span><span style="--share:13.33%">Пилот <b>0,40</b></span><span style="--share:8.33%">Infra + AI <b>0,25</b></span><span style="--share:5%">Legal <b>0,15</b></span><span style="--share:10%">Резерв <b>0,30</b></span></div><div class="budget-total"><span>Runway</span><strong>3 месяца</strong><span>Команда</span><strong>2 dev + product/UX + part-time growth</strong></div></div>
   </section>
 </main>
 
-<nav class="deck-controls" aria-label="Навигация по презентации">
-  <button type="button" data-prev aria-label="Предыдущий экран">←</button>
-  <div class="progress"><span data-progress></span></div>
-  <button type="button" data-next aria-label="Следующий экран">→</button>
-</nav>
-
+<nav class="deck-controls"><button data-prev>←</button><div class="progress"><span data-progress></span></div><button data-next>→</button></nav>
 <div class="keyboard-hint">← → для навигации</div>
 {% endblock %}
