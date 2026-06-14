@@ -47,11 +47,28 @@ h2 {
 }
 
 .channel-copy {
-  flex-wrap: wrap;
+  display: block;
+  white-space: normal;
+}
+
+.channel-tag {
+  display: block;
+  font-size: 8px;
 }
 
 .channel-copy h3 {
+  margin-top: 5px;
   font-size: clamp(17px, 1.45vw, 22px);
+}
+
+.telegram-shots figure,
+.web-shot {
+  height: clamp(235px, 27vh, 270px);
+  min-height: 235px;
+}
+
+.product-story {
+  grid-template-columns: minmax(0, 1fr) 52px minmax(0, 1fr);
 }
 
 .research-grid strong {
@@ -211,8 +228,8 @@ h2 {
 
   .telegram-shots figure,
   .web-shot {
-    height: 190px;
-    min-height: 190px;
+    height: 220px;
+    min-height: 220px;
   }
 
   .pricing article {
